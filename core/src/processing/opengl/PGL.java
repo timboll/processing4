@@ -88,7 +88,7 @@ public abstract class PGL {
   protected static int DEFAULT_TESS_INDICES  = 128;
 
   /** Maximum lights by default is 8, the minimum defined by OpenGL. */
-  protected static int MAX_LIGHTS = 8;
+  protected static int MAX_LIGHTS = 64;
 
   /** Maximum index value of a tessellated vertex. GLES restricts the vertex
    * indices to be of type unsigned short. Since Java only supports signed

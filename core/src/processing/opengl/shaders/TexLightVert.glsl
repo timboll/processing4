@@ -26,13 +26,13 @@ uniform mat3 normalMatrix;
 uniform mat4 texMatrix;
 
 uniform int lightCount;
-uniform vec4 lightPosition[8];
-uniform vec3 lightNormal[8];
-uniform vec3 lightAmbient[8];
-uniform vec3 lightDiffuse[8];
-uniform vec3 lightSpecular[8];      
-uniform vec3 lightFalloff[8];
-uniform vec2 lightSpot[8];
+uniform vec4 lightPosition[64];
+uniform vec3 lightNormal[64];
+uniform vec3 lightAmbient[64];
+uniform vec3 lightDiffuse[64];
+uniform vec3 lightSpecular[64];
+uniform vec3 lightFalloff[64];
+uniform vec2 lightSpot[64];
 
 attribute vec4 position;
 attribute vec4 color;
@@ -97,7 +97,7 @@ void main() {
   vec3 totalBackDiffuse = vec3(0, 0, 0);
   vec3 totalBackSpecular = vec3(0, 0, 0);
   
-  for (int i = 0; i < 8; i++) {
+  for (int i = 0; i < 64; i++) {
     if (lightCount == i) break;
     
     vec3 lightPos = lightPosition[i].xyz;
